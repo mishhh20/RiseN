@@ -19,7 +19,7 @@ const portfolioRoutes = require("./routes/portfolioRoutes");
 app.use("/api/portfolio", portfolioRoutes);
 const watchlistRoutes = require("./routes/watchlistRoutes");
 app.use("/api/watchlist", watchlistRoutes);
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_DB_URL)
   .then(() => console.log("MongoDB Connected ✅"))
   .catch(err => console.log(err));
 

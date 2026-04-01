@@ -36,7 +36,7 @@ export default function Signup() {
               <polyline points="16 7 22 7 22 13"/>
             </svg>
           </div>
-          <span className="text-xl font-semibold text-white">StockApp</span>
+          <span className="text-xl font-semibold text-white">RiseN</span>
         </div>
 
         <div className="bg-gray-900 rounded-2xl border border-gray-800 p-8">
