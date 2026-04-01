@@ -7,7 +7,9 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ 
+  origin: process.env.FRONTEND_URL || "http://localhost:3000" 
+}));
 app.use(express.json());
 
 const userRoutes = require("./routes/userRoutes");
@@ -21,6 +23,6 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected ✅"))
   .catch(err => console.log(err));
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Server running on port 5000");
 });
